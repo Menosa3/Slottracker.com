@@ -3,6 +3,7 @@
   <head>
     <title>Slottracker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json">
     <script>
       if ('serviceWorker' in navigator) {
@@ -16,16 +17,22 @@
     </script>
   </head>
   <body>
-    <h1>Slot Game Tracker</h1>
-    <form id="slotDataForm">
-      <label for="game">Game:</label>
-      <input type="text" id="game" name="game" required>
-      <label for="result">Result:</label>
-      <input type="text" id="result" name="result" required>
-      <button type="submit">Submit</button>
-    </form>
-    <h2>Tracked Results</h2>
-    <ul id="slotDataList"></ul>
+    <div class="container">
+      <h1 class="my-4">Slot Game Tracker</h1>
+      <form id="slotDataForm">
+        <div class="form-group">
+          <label for="game">Game:</label>
+          <input type="text" class="form-control" id="game" name="game" required>
+        </div>
+        <div class="form-group">
+          <label for="result">Result:</label>
+          <input type="text" class="form-control" id="result" name="result" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <h2 class="my-4">Tracked Results</h2>
+      <ul id="slotDataList" class="list-group"></ul>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
