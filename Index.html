@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Slottracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(function(registration) {
+            console.log('Service Worker registered with scope:', registration.scope);
+          }).catch(function(error) {
+            console.log('Service Worker registration failed:', error);
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Slot Game Tracker</h1>
+    <form id="slotDataForm">
+      <label for="game">Game:</label>
+      <input type="text" id="game" name="game" required>
+      <label for="result">Result:</label>
+      <input type="text" id="result" name="result" required>
+      <button type="submit">Submit</button>
+    </form>
+    <h2>Tracked Results</h2>
+    <ul id="slotDataList"></ul>
+    <script src="script.js"></script>
+  </body>
+</html>
